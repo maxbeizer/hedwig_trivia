@@ -1,12 +1,15 @@
 defmodule HedwigTrivia.MixProject do
   use Mix.Project
 
+  @vsn "0.1.0"
+
   def project do
     [
       app: :hedwig_trivia,
-      version: "0.1.0",
+      version: @vsn,
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
+      elixirc_paths: elixirc_paths(Mix.env()),
       deps: deps()
     ]
   end
@@ -21,8 +24,14 @@ defmodule HedwigTrivia.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:hedwig, "~> 1.0"},
+      {:httpoison, "~> 1.6.0"}
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 end
