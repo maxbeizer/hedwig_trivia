@@ -3,5 +3,4 @@ set -euo pipefail
 IFS=$'\n\t'
 
 mix format --check-formatted &&
-mix credo --strict &&
-mix dialyzer
+mix credo --strict
