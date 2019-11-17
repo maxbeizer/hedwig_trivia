@@ -10,7 +10,16 @@ defmodule HedwigTrivia.MixProject do
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps()
+      deps: deps(),
+      description: "A trivia game plugin for Hedwig.",
+      package: [
+        name: "hedwig_trivia",
+        files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
+        licenses: ["MIT"],
+        links: %{"GitHub" => "https://github.com/maxbeizer/hedwig_trivia"}
+      ],
+      source_url: "https://github.com/maxbeizer/hedwig_trivia",
+      homepage_url: "https://github.com/maxbeizer/hedwig_trivia"
     ]
   end
 
