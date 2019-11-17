@@ -19,6 +19,24 @@ end
 Docs can be found at
 [https://hexdocs.pm/hedwig_trivia](https://hexdocs.pm/hedwig_trivia).
 
+## Usage
+
+```
+hedwig trivia
+# fetches a new trivia question from the API, unless you already have an
+# unanswered question
+
+hedwig trivia!
+# fetches a new trivia question from the API, regardless of whether you already
+# have an unanswered question
+
+hedwig guess <guess>
+# submit a guess for the current question
+
+hedwig solution
+# get the answer to the current question
+```
+
 ## Development
 
 `mix deps.get`
