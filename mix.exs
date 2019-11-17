@@ -28,7 +28,8 @@ defmodule HedwigTrivia.MixProject do
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.21", only: :dev, runtime: false},
       {:hedwig, "~> 1.0"},
-      {:httpoison, "~> 1.6.0"}
+      {:httpoison, "~> 1.5"},
+      {:poison, "~> 3.1"}
     ]
   end
 

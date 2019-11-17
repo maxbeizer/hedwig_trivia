@@ -1,5 +1,6 @@
 defmodule HedwigTrivia do
   @moduledoc """
+  A GenServer to hold the state and provide a general API to the game.
   """
   use GenServer
   require Logger

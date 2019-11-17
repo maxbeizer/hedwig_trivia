@@ -2,8 +2,9 @@ defmodule HedwigTrivia.Fetchers.API do
   @moduledoc """
   A module to provide an interface to call the trivia API.
   """
+  alias HedwigTrivia.Fetchers.HTTP
 
-  @http Application.get_env(:hedwig_trivia, :http)
+  @http Application.get_env(:hedwig_trivia, :http, HTTP)
 
   @doc """
   Get a random question/answer from the API and return all the data.

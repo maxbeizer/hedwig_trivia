@@ -2,8 +2,8 @@ defmodule HedwigTrivia.LogicTest do
   use ExUnit.Case, async: true
 
   alias HedwigTrivia.{
-    Logic,
-    GameState
+    GameState,
+    Logic
   }
 
   describe "question/2" do
@@ -11,8 +11,7 @@ defmodule HedwigTrivia.LogicTest do
     when the current question has not yet been answered and a new question is
     not being forced, return a not_answered tuple
     """ do
-      game_state =
-        new_game_state(%{answered: false, question: "not yet answered"})
+      game_state = new_game_state(%{answered: false, question: "not yet answered"})
 
       {atom, res} = Logic.question(game_state, false)
       assert :not_answered == atom

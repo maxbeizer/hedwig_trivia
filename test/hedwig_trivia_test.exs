@@ -39,10 +39,7 @@ defmodule HedwigTriviaTest do
     end
 
     test "when question has been answered, returns fetches a new question" do
-      {:ok, _pid} =
-        start_supervised(
-          {HedwigTrivia, %{answered: true, question: "already posed"}}
-        )
+      {:ok, _pid} = start_supervised({HedwigTrivia, %{answered: true, question: "already posed"}})
 
       {atom, result} = HedwigTrivia.question()
       # see http_mock

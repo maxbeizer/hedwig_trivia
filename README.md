@@ -1,11 +1,12 @@
-# HedwigTrivia
+# hedwig_trivia
 
-**TODO: Add description**
+A [Hedwig](https://github.com/hedwig-im/hedwig) plugin to play trivia via the
+[jservice](http://jservice.io/) API.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `hedwig_trivia` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `hedwig_trivia` to your list of
+dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +16,20 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/hedwig_trivia](https://hexdocs.pm/hedwig_trivia).
+Docs can be found at
+[https://hexdocs.pm/hedwig_trivia](https://hexdocs.pm/hedwig_trivia).
 
+## Development
+
+`mix deps.get`
+`mix test`
+`bin/lint`
+
+## License
+
+MIT
+
+## Acknowledgements
+
+[@sottenad](https://github.com/sottenad) for the API
+[@scrogson](https://github.com/scrogson) for Hedwig

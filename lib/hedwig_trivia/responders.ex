@@ -7,7 +7,7 @@ defmodule HedwigTrivia.Responders do
 
   use Hedwig.Responder
 
-  @fetcher Application.get_env(:hedwig_trivia, :fetcher)
+  @fetcher Application.get_env(:hedwig_trivia, :fetcher, HedwigTrivia)
 
   @usage """
   hedwig trivia - displays a trivia category and question
